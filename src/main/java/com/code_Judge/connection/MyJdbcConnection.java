@@ -12,7 +12,7 @@ public class MyJdbcConnection {
 	            "root";
 
 	    private static final String PASSWORD =
-	            "Your password";
+	            "root";
 
 	    public static Connection getConnection() throws SQLException {
 
