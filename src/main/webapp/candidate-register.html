@@ -1,46 +1,146 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Candidate Registration - CodeJudge</title>
-</head>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .brand-header h1 {
+            color: #0056b3;
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+
+        .brand-header p {
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #0056b3;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #0056b3;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #004085;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+        }
+
+        .footer-text a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
 
-    <h1>CodeJudge</h1>
+    <div class="card">
+        <div class="brand-header">
+            <h1>CodeJudge</h1>
+            <p>Create your candidate account</p>
+        </div>
 
-    <h2>Candidate Registration</h2>
+        <form action="candidateRegister" method="post">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
 
-    <form action="candidateRegister" method="post">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
 
-        <label for="name">Name:</label>
-        <br>
-        <input type="text" id="name" name="name" required>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" minlength="4" required>
+            </div>
 
-        <br><br>
+            <button type="submit" class="btn-submit">Register</button>
+        </form>
 
-        <label for="email">Email:</label>
-        <br>
-        <input type="email" id="email" name="email" required>
-
-        <br><br>
-
-        <label for="password">Password:</label>
-        <br>
-        <input type="password" id="password" name="password" required>
-
-        <br><br>
-
-        <button type="submit">Register</button>
-
-    </form>
-
-    <br>
-
-    <p>Already have an account?</p>
-
-    <a href="candidate-login.html">Login here</a>
+        <div class="footer-text">
+            Already have an account? <a href="candidate-login.html">Log in here</a>
+        </div>
+    </div>
 
 </body>
 </html>

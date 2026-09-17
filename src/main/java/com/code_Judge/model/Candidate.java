@@ -9,10 +9,12 @@ public class Candidate {
 
     // Default Constructor
     public Candidate() {
+    	
     }
 
     // Parameterized Constructor
     public Candidate(int candidateId, String name, String email, String password) {
+    	
         this.candidateId = candidateId;
         this.name = name;
         this.email = email;
