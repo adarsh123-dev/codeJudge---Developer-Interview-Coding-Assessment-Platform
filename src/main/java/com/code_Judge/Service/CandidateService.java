@@ -36,4 +36,18 @@ public class CandidateService {
 
         return candidateDAO.registerCandidate(candidate);
     }
+    
+    
+    public Candidate loginCandidate(String email, String password) {
+
+        if (email == null || email.trim().isEmpty()) {
+            return null;
+        }
+
+        if (password == null || password.trim().isEmpty()) {
+            return null;
+        }
+
+        return candidateDAO.loginCandidate(email, password);
+    }
 }
